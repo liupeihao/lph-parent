@@ -1,0 +1,15 @@
+package ${package.Service};
+
+import ${package.Entity}.${com.lph.entity};
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * $!{table.comment} Service
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${table.serviceName} {
+
+
+}

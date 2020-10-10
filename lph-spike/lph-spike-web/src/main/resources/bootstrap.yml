@@ -1,0 +1,27 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /lph-spike
+spring:
+  application:
+    name: lph-spike
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      config:
+        server-addr: 47.104.225.53:8848
+        file-extension: yml
+        namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.config.namespace
+        extension-configs:
+          - data-id: spike-redis.yml
+            group: PUBLIC_GROUP
+            refresh: false
+          - data-id: spike-mysql.yml
+            group: PUBLIC_GROUP
+            refresh: false
+          - data-id: spike-common.yml
+            group: PUBLIC_GROUP
+            refresh: true
+logging:
+  config: classpath:logback-spring.xml
