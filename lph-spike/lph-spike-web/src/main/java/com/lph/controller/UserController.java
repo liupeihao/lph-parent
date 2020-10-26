@@ -32,4 +32,11 @@ public class UserController {
         return ServerResponse.success();
     }
 
+
+    @PostMapping(value = "discovery_test")
+    private ServerResponse discoveryTest(String name){
+        return ServerResponse.success(name);
+    }
+
+
 }

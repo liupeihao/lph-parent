@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import java.sql.SQLException;
 
 /**
- *
+ * 代码自动成圣
  */
 public class CodeAutoGenerator  {
 
