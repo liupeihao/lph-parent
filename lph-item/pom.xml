@@ -9,6 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+    <modules>
+        <module>lph-item-api</module>
+        <module>lph-item-server</module>
+        <module>lph-item-web</module>
+    </modules>
     <artifactId>lph-item</artifactId>
 
 

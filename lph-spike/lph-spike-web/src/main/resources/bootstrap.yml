@@ -16,10 +16,10 @@ spring:
         file-extension: yml
         namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.config.namespace
         extension-configs:
-          - data-id: spike-redis.yml
+          - data-id: redis.yml
             group: PUBLIC_GROUP
             refresh: false
-          - data-id: spike-mysql.yml
+          - data-id: mysql.yml
             group: PUBLIC_GROUP
             refresh: false
           - data-id: spike-common.yml

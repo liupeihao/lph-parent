@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @JsonSerialize
-public class ${com.lph.entity}  extends BaseEntity{
+public class ${com.lph.spike.entity}  extends BaseEntity{
 
     private static final long serialVersionUID = 1L;
 

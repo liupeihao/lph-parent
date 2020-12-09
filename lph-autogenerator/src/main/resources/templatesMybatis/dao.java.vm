@@ -1,8 +1,8 @@
 package ${package.Mapper};
 
 
-import ${package.Entity}.${com.lph.entity};
-import com.baomidou.mybatisplus.core.com.lph.mapper.BaseMapper;
+import ${package.Entity}.${com.lph.spike.entity};
+import com.baomidou.mybatisplus.core.com.lph.spike.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -14,6 +14,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since ${date}
  */
 @Mapper
-public interface ${table.mapperName} extends BaseMapper<${com.lph.entity}> {
+public interface ${table.mapperName} extends BaseMapper<${com.lph.spike.entity}> {
 
 }

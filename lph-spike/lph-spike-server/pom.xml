@@ -35,8 +35,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.messaginghub</groupId>
-            <artifactId>pooled-jms</artifactId>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectjrt.version}</version>
         </dependency>
 
         <dependency>

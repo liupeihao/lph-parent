@@ -11,7 +11,7 @@ import ${package.Service}.${table.serviceName};
 /**
  * @author ${author}
  * @since ${date}
- * ${com.lph.entity}Controller
+ * ${com.lph.spike.entity}Controller
  * @Description
  */
 @Slf4j

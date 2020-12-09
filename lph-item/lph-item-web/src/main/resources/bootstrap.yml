@@ -1,0 +1,29 @@
+server:
+  port: 9998
+  servlet:
+    context-path: /lph-item
+spring:
+  application:
+    name: lph-item
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.104.225.53:8848
+      config:
+        server-addr: 47.104.225.53:8848
+        file-extension: yml
+        namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.config.namespace
+        extension-configs:
+          - data-id: redis.yml
+            group: PUBLIC_GROUP
+            refresh: false
+          - data-id: mysql.yml
+            group: PUBLIC_GROUP
+            refresh: false
+          - data-id: item-common.yml
+            group: PUBLIC_GROUP
+            refresh: true
+logging:
+  config: classpath:logback-spring.xml

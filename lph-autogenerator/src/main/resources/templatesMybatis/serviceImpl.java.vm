@@ -3,9 +3,9 @@ package ${package.ServiceImpl};
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.baomidou.mybatisplus.extension.com.lph.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.com.lph.spike.service.impl.ServiceImpl;
 
-import ${package.Entity}.${com.lph.entity};
+import ${package.Entity}.${com.lph.spike.entity};
 import ${package.Mapper}.${table.mapperName};
 import ${package.Service}.${table.serviceName};
 
@@ -18,7 +18,7 @@ import ${package.Service}.${table.serviceName};
  * @since ${date}
  */
 @Service
-public class ${table.serviceImplName} extends ServiceImpl<${table.mapperName},${com.lph.entity}> implements ${table.serviceName}{
+public class ${table.serviceImplName} extends ServiceImpl<${table.mapperName},${com.lph.spike.entity}> implements ${table.serviceName}{
 
 
     @Autowired
