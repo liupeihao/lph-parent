@@ -79,10 +79,6 @@ public class ServerResponse<T> implements Serializable {
     }
 
     public static <T> ServerResponse<T> error(Exception exception) {
-        if (exception instanceof BaseException) {
-            BaseException wechatException = (BaseException) exception;
-            return error(wechatException.getCode(), wechatException.getMsg());
-        }
         return error(ReturnCode.ERROR.getCode(), exception.getMessage());
     }
 
