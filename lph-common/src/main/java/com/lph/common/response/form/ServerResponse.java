@@ -1,4 +1,4 @@
-package com.lph.common.response;
+package com.lph.common.response.form;
 
 
 import com.lph.common.exception.BaseException;

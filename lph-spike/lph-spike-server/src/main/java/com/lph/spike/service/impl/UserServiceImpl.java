@@ -1,14 +1,14 @@
 package com.lph.spike.service.impl;
 
 
-import com.lph.spike.dto.UserDto;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-
+import com.lph.spike.dto.UserDto;
 import com.lph.spike.entity.User;
 import com.lph.spike.mapper.UserMapper;
 import com.lph.spike.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 
 import java.time.LocalDateTime;
 
@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
  * @since 2020-10-10
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements UserService{
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
 
     @Autowired

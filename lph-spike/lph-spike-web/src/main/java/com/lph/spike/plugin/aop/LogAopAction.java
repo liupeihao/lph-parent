@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -19,7 +19,7 @@ import java.util.Map;
 
 @Slf4j
 @Aspect
-@Component
+@Configuration
 public class LogAopAction {
     private static final String IP = "ip";
     private static final String URI = "uri";

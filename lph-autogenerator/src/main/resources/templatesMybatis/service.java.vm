@@ -1,6 +1,6 @@
 package ${package.Service};
 
-import ${package.Entity}.${com.lph.spike.entity};
+import ${package.Entity}.${com.lph.item.service.impl.entity};
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

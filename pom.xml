@@ -33,6 +33,7 @@
         <skipTests>true</skipTests>
 
         <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <spring-cloud-alibaba.openfegin.version>2.2.1.RELEASE</spring-cloud-alibaba.openfegin.version>
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <swagger2.version>2.9.2</swagger2.version>
         <zookeeper.version>3.4.12</zookeeper.version>
@@ -73,6 +74,8 @@
 
 
 
+
+
     </dependencies>
 
     <dependencyManagement>
@@ -87,6 +90,7 @@
 
         </dependencies>
     </dependencyManagement>
+
 
 
 </project>

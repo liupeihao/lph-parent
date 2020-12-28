@@ -1,7 +1,7 @@
 server:
   port: 9998
   servlet:
-    context-path: /lph-item
+    context-path: /
 spring:
   application:
     name: lph-item
@@ -22,7 +22,7 @@ spring:
           - data-id: mysql.yml
             group: PUBLIC_GROUP
             refresh: false
-          - data-id: item-common.yml
+          - data-id: spike-common.yml
             group: PUBLIC_GROUP
             refresh: true
 logging:

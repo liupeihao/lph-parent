@@ -1,8 +1,8 @@
 package com.lph.item.plugin.exception;
 
 import com.lph.common.exception.BaseException;
-import com.lph.common.response.ReturnCode;
-import com.lph.common.response.ServerResponse;
+import com.lph.common.response.form.ReturnCode;
+import com.lph.common.response.form.ServerResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;

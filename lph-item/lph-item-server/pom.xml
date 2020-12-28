@@ -9,8 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.lph</groupId>
     <artifactId>lph-item-server</artifactId>
 
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -35,6 +37,18 @@
             <version>${druid.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${spring-cloud-alibaba.openfegin.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectjrt.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -49,13 +63,17 @@
 
         <dependency>
             <groupId>com.lph</groupId>
-            <artifactId>lph-common</artifactId>
+            <artifactId>lph-item-api</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lph</groupId>
+            <artifactId>lph-spike-api</artifactId>
+            <version>1.0</version>
         </dependency>
 
 
     </dependencies>
-
 
 </project>

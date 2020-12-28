@@ -54,16 +54,16 @@ public class CodeAutoGenerator  {
 //                .setDbColumnUnderline(true)  // 指定表名 字段名是否使用下划线
                 .setNaming(NamingStrategy.underline_to_camel) // 数据库表映射到实体的命名策略
                 .setInclude(tables) // 生成的表
-                .setSuperMapperClass("com.baomidou.mybatisplus.core.com.lph.spike.mapper.BaseMapper");
+                .setSuperMapperClass("com.baomidou.mybatisplus.core.com.lph.item.service.impl.mapper.BaseMapper");
 
         //4. 包名策略配置
         PackageConfig pkConfig = new PackageConfig();
         pkConfig.setParent(parentPackage)
                 .setMapper("com.lph.spike.dao")//com.lph.spike.dao
-                .setService("com.lph.spike.service")//servcie
+                .setService("com.lph.item.service.impl.service")//servcie
                 .setController("com.lph.spike.controller")//com.lph.spike.controller
-                .setEntity("com.lph.spike.entity")
-                .setXml("com.lph.spike.mapper");//com.lph.spike.mapper.xml
+                .setEntity("com.lph.item.service.impl.entity")
+                .setXml("com.lph.item.service.impl.mapper");//com.lph.item.service.impl.mapper.xml
 
 
         //5. 整合配置

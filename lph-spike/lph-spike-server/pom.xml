@@ -35,6 +35,13 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${spring-cloud-alibaba.openfegin.version}</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
             <version>${aspectjrt.version}</version>
@@ -53,7 +60,7 @@
 
         <dependency>
             <groupId>com.lph</groupId>
-            <artifactId>lph-common</artifactId>
+            <artifactId>lph-spike-api</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>

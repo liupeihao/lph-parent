@@ -1,7 +1,6 @@
 package com.lph.spike.plugin.interceptor;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,9 +19,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *  跨域拦截器
  */
+@Slf4j
 public class CrossInterceptor implements HandlerInterceptor {
 
-    private static final Logger logger = LoggerFactory.getLogger(CrossInterceptor.class);
 
     @Value("${lph.config.allowUrls}")
     private String allowUrls;
@@ -31,11 +30,9 @@ public class CrossInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         //这里只能设置一个url  或者全部  。
         response.addHeader("Access-Control-Allow-Origin","*");
-        //请求方法
         response.addHeader("Access-Control-Allow-Methods","*");
 
         response.addHeader("Access-Control-Allow-Credentials","true");
-        //允许token
         response.addHeader("Access-Control-Allow-Headers","Content-Type,token");
         return true;
     }

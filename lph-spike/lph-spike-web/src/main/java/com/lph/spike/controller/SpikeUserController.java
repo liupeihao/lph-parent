@@ -1,15 +1,14 @@
 package com.lph.spike.controller;
 
+import com.lph.common.response.across.AcrossServiceResponse;
+import com.lph.common.response.form.ServerResponse;
 import com.lph.spike.dto.UserDto;
-import com.lph.common.response.ServerResponse;
+import com.lph.spike.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import lombok.extern.slf4j.Slf4j;
 
-import com.lph.spike.service.UserService;
 
 /**
  * @author LPH
@@ -20,22 +19,25 @@ import com.lph.spike.service.UserService;
 @Slf4j
 @RestController
 @RequestMapping(value="/user",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-public class UserController {
+@ResponseBody
+public class SpikeUserController {
 
     @Autowired
     public UserService userService;
 
 
     @PostMapping(value = "create_user")
+
     private ServerResponse createUser(UserDto dto){
         userService.createUser(dto);
         return ServerResponse.success();
     }
 
 
-    @PostMapping(value = "discovery_test")
-    private ServerResponse discoveryTest(String name){
-        return ServerResponse.success(name);
+    @PostMapping(value = "fegin_test",produces =MediaType.APPLICATION_JSON_UTF8_VALUE )
+    private AcrossServiceResponse<String> feginTest(@RequestBody String name){
+        log.info("request in ,paramer is {}",name);
+        return AcrossServiceResponse.success(name);
     }
 
 
