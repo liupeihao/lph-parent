@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CrossInterceptor implements HandlerInterceptor {
 
 
-    @Value("${lph.config.allowUrls}")
+    @Value("${lph.convertconfig.allowUrls}")
     private String allowUrls;
 
     @Override

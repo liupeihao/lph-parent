@@ -1,7 +1,6 @@
 package com.lph.common.response.form;
 
 
-import com.lph.common.exception.BaseException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

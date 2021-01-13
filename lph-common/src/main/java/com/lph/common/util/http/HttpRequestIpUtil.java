@@ -1,4 +1,4 @@
-package com.lph.common.util;
+package com.lph.common.util.http;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by @author lph on 2019-05-28.
  */
-public class RequestUtil {
+public class HttpRequestIpUtil {
 
     public static final String UNKNOWN = "unknown";
 

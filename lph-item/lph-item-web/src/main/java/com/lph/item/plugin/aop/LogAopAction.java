@@ -1,7 +1,7 @@
 package com.lph.item.plugin.aop;
 
-import com.lph.common.util.JacksonUtils;
-import com.lph.common.util.RequestUtil;
+import com.lph.common.util.convert.JacksonUtils;
+import com.lph.common.util.http.HttpRequestIpUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -21,11 +21,8 @@ import java.util.Map;
 @Aspect
 @Component
 public class LogAopAction {
-    private static final String IP = "ip";
-    private static final String URI = "uri";
 
-
-    @Pointcut("execution(* com.lph.spike.controller.*.*(..))")
+    @Pointcut("execution(* com.lph.item.controller.*.*(..))")
     private void controllerAspect() {
     }
 
@@ -42,9 +39,9 @@ public class LogAopAction {
             String name = parameterNames.nextElement();
             map.put(name,request.getParameter(name));
         }
-        log.info("请求IP: {}", RequestUtil.getRemoteHost(request));
-        log.info("请求路径: {}", request.getRequestURI());
-        log.info("请求参数: {}", JacksonUtils.beanToString(map));
+        log.info("IP: {}", HttpRequestIpUtil.getRemoteHost(request));
+        log.info("url: {}", request.getRequestURI());
+        log.info("参数: {}", JacksonUtils.beanToString(map));
     }
 
 
@@ -54,7 +51,7 @@ public class LogAopAction {
     @AfterReturning(value = "controllerAspect()", returning = "returnObj")
     public void doAfter(JoinPoint point, Object returnObj) {
         String returnObjJson = JacksonUtils.beanToString(returnObj);
-        log.info("执行耗时时间:{}ms, 返回的参数信息：{}",  returnObjJson);
+        log.info("反参：{}",  returnObjJson);
     }
 
 

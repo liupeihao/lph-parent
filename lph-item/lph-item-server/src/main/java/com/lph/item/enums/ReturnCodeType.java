@@ -1,4 +1,4 @@
-package com.lph.common.response.form;
+package com.lph.item.enums;
 
 import lombok.Getter;
 
@@ -10,14 +10,9 @@ import java.util.Arrays;
  * F:三方异常
  */
 @Getter
-public enum ReturnCode {
+public enum ReturnCodeType {
 
-    SUCCESS("200","成功"),
-
-    ERROR("500","服务端异常")
-
-
-
+    LOTTERY_TYPE_NOT_EXIST("C00001","彩票类型不存在"),
 
     
     ;
@@ -32,17 +27,17 @@ public enum ReturnCode {
      */
     private String name;
 
-    ReturnCode(String code, String name) {
+    ReturnCodeType(String code, String name) {
         this.code = code;
         this.name = name;
     }
 
 
     public static String getNameByCode(String code) {
-        return Arrays.stream(ReturnCode.values())
+        return Arrays.stream(ReturnCodeType.values())
                 .filter(codeType -> codeType.getCode().equals(code))
                 .findFirst()
-                .map(ReturnCode::getName)
+                .map(ReturnCodeType::getName)
                 .orElse("未知枚举项");
     }
 }

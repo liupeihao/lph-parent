@@ -14,7 +14,7 @@ spring:
       config:
         server-addr: 47.104.225.53:8848
         file-extension: yml
-        namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.config.namespace
+        namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.convertconfig.namespace
         extension-configs:
           - data-id: redis.yml
             group: PUBLIC_GROUP
@@ -25,5 +25,15 @@ spring:
           - data-id: spike-common.yml
             group: PUBLIC_GROUP
             refresh: true
+
+#eureka-client:
+#  ribbon:
+#    # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机
+#    # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #配置规则 轮询
+#    # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule #配置规则 重试
+#    # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule #配置规则 响应时间权重
+#    # 我们也可以指定为其他策略，包括我们自己定义的，只要把相应的包路径写到这即可。
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
 logging:
   config: classpath:logback-spring.xml

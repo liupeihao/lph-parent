@@ -16,17 +16,17 @@ public class Sha256Utils {
 
     /**
      *  对字符串进行 HMACSHA256 加密。并输出Base64
-     * @param strText
-     * @param strKey
+     * @param content
+     * @param key
      * @return
      */
-    public static String HMACSHA256(final String strText, final String strKey) {
+    public static String HMACSHA256(final String content, final String key) {
         String strResult = null;
         try {
             Mac sha256_HMAC = Mac.getInstance("HmacSHA256");
-            SecretKeySpec secretKey   = new SecretKeySpec(strKey.getBytes(), "HmacSHA256");
+            SecretKeySpec secretKey   = new SecretKeySpec(key.getBytes(), "HmacSHA256");
             sha256_HMAC.init(secretKey);
-            byte[] hash = sha256_HMAC.doFinal(strText.getBytes());
+            byte[] hash = sha256_HMAC.doFinal(content.getBytes());
             strResult = toBase64(hash);
             return strResult;
         } catch (NoSuchAlgorithmException e) {

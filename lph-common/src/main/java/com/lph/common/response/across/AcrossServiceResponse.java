@@ -24,7 +24,10 @@ public class AcrossServiceResponse<T> implements Serializable {
      */
     private T data;
 
-
+    /**
+     * 错误消息
+     */
+    private String errorMsg;
 
     /**
      * 是否成功响应。
@@ -50,9 +53,10 @@ public class AcrossServiceResponse<T> implements Serializable {
     /**
      * 响应失败
      */
-    public static AcrossServiceResponse error() {
+    public static AcrossServiceResponse error(String errorMsg) {
         AcrossServiceResponse response = new AcrossServiceResponse();
         response.setStatus(0);
+        response.setErrorMsg(errorMsg);
         return response;
     }
 
@@ -87,4 +91,11 @@ public class AcrossServiceResponse<T> implements Serializable {
         this.data = data;
     }
 
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+    }
 }

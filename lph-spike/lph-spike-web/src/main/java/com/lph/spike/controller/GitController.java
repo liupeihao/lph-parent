@@ -28,7 +28,7 @@ public class GitController {
     @RequestMapping("/version")
     public String versionInformation() {
         ClassLoader classLoader = getClass().getClassLoader();
-        InputStream inputStream = classLoader.getResourceAsStream("git.properties");
+        InputStream inputStream = classLoader.getResourceAsStream("git.nacosproperties");
         try {
             return readFromInputStream(inputStream);
         } catch (IOException e) {

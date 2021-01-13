@@ -14,7 +14,7 @@ spring:
       config:
         server-addr: 47.104.225.53:8848
         file-extension: yml
-        namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.config.namespace
+        namespace: 59a12304-2ab1-4028-9b9f-da0a54409c8e #spring.cloud.nacos.convertconfig.namespace
         extension-configs:
           - data-id: redis.yml
             group: PUBLIC_GROUP
@@ -22,7 +22,13 @@ spring:
           - data-id: mysql.yml
             group: PUBLIC_GROUP
             refresh: false
-          - data-id: spike-common.yml
+          - data-id: item-common.yml
+            group: PUBLIC_GROUP
+            refresh: true
+          - data-id: xxl-job.yml
+            group: PUBLIC_GROUP
+            refresh: true
+          - data-id: mail.yml
             group: PUBLIC_GROUP
             refresh: true
 logging:

@@ -1,7 +1,6 @@
 package com.lph.spike.plugin.aop;
 
-import com.lph.common.util.JacksonUtils;
-import com.lph.common.util.RequestUtil;
+import com.lph.common.util.http.HttpRequestIpUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -42,7 +41,7 @@ public class LogAopAction {
             String name = parameterNames.nextElement();
             map.put(name,request.getParameter(name));
         }
-        log.info("请求IP: {}", RequestUtil.getRemoteHost(request));
+        log.info("请求IP: {}", HttpRequestIpUtil.getRemoteHost(request));
         log.info("请求路径: {}", request.getRequestURI());
         log.info("请求参数: {}", JacksonUtils.beanToString(map));
     }

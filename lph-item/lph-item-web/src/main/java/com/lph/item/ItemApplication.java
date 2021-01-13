@@ -9,10 +9,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
 @SpringBootApplication()
-@ComponentScans(value = {@ComponentScan(value = "com.lph")})
+@ComponentScans(value = {@ComponentScan(value = "com.lph.item")})
 @MapperScan("com.lph.item.mapper")
 @EnableDiscoveryClient
-@EnableFeignClients("com.lph")
+@EnableFeignClients("com.lph.item.api.fegin")
 public class ItemApplication {
     public static void main(String[] args) {
         SpringApplication.run(ItemApplication.class, args);

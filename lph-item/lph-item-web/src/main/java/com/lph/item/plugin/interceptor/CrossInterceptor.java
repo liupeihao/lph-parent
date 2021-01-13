@@ -24,7 +24,7 @@ public class CrossInterceptor implements HandlerInterceptor {
 
     private static final Logger logger = LoggerFactory.getLogger(CrossInterceptor.class);
 
-    @Value("${lph.config.allowUrls}")
+    @Value("${lph.convertconfig.allowUrls}")
     private String allowUrls;
 
     @Override
