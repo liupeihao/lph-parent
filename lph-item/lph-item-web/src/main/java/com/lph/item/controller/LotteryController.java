@@ -2,6 +2,7 @@ package com.lph.item.controller;
 
 import com.lph.common.response.form.ServerResponse;
 import com.lph.item.form.LotteryGeneratorForm;
+import com.lph.item.service.IItemUserService;
 import com.lph.item.service.ILotteryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -31,6 +32,7 @@ public class LotteryController {
 
     @Autowired
     private ILotteryService lotteryService;
+
 
     /**
      * 生成彩票号码

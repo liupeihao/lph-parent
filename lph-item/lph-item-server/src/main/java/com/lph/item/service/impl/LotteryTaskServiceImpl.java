@@ -1,7 +1,7 @@
 package com.lph.item.service.impl;
 
-import com.lph.item.plugin.nacosproperties.LotteryDayProperties;
-import com.lph.item.plugin.nacosproperties.MailProperties;
+import com.lph.item.nacosproperties.LotteryDayProperties;
+import com.lph.item.nacosproperties.MailProperties;
 import com.lph.item.service.ILotteryService;
 import com.lph.item.service.ILotteryTaskService;
 import com.lph.item.service.IMailService;

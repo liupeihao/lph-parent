@@ -25,6 +25,7 @@
         <module>lph-common</module>
         <module>lph-autogenerator</module>
         <module>lph-item</module>
+        <module>lph-zuul</module>
     </modules>
 
 

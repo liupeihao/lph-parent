@@ -27,7 +27,7 @@ public class ItemUserController {
     private IItemUserService itemUserService;
 
     @PostMapping(value = "user_test")
-    private ServerResponse<String> userTest(String name){
+    public ServerResponse<String> userTest(String name){
         String r_name=itemUserService.feginTest(name);
 
         return ServerResponse.success(r_name);

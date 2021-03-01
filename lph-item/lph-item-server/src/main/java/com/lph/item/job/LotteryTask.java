@@ -1,6 +1,6 @@
 package com.lph.item.job;
 
-import com.lph.item.plugin.util.bean.SpringUtil;
+import com.lph.item.beanutil.SpringUtil;
 import com.lph.item.service.ILotteryTaskService;
 import com.lph.item.service.impl.LotteryTaskServiceImpl;
 import com.xxl.job.core.biz.model.ReturnT;
@@ -19,7 +19,6 @@ public class LotteryTask extends IJobHandler {
     @XxlJob("LotteryTask")
     @Override
     public ReturnT<String> execute(String s) {
-        log.info("lotteryTaskService is {}", lotteryTaskService);
         lotteryTaskService.sendLotteryNo(s);
         return ReturnT.SUCCESS;
     }

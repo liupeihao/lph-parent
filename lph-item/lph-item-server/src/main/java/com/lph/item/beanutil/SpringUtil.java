@@ -1,4 +1,4 @@
-package com.lph.item.plugin.util.bean;
+package com.lph.item.beanutil;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -11,12 +11,8 @@ public class SpringUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext = null;
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        // TODO Auto-generated method stub
         if (SpringUtil.applicationContext == null) {
             SpringUtil.applicationContext = applicationContext;
-            System.out.println("=============================================="+
-                    "========ApplicationContext配置成功,在普通类可以通过调用ToolSpring.getAppContext()获取applicationContext对象,applicationContext="
-                    + applicationContext + "==========");
         }
     }
     public static ApplicationContext getApplicationContext() {

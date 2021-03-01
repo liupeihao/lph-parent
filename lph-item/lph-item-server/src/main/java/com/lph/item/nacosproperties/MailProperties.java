@@ -1,4 +1,4 @@
-package com.lph.item.plugin.nacosproperties;
+package com.lph.item.nacosproperties;
 
 
 import lombok.Data;

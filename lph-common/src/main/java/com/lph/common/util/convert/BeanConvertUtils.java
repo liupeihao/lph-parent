@@ -65,7 +65,7 @@ public class BeanConvertUtils {
                         target = tClass.newInstance();
                         BeanUtils.copyProperties(source, target);
                     } catch (InstantiationException | IllegalAccessException e) {
-                        log.error("bean in list copy error:{}", e.getMessage());
+                        log.error("beanutil in list copy error:{}", e.getMessage());
                     }
                     return target;
                 })

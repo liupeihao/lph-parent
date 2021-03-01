@@ -4,7 +4,7 @@ server:
     context-path: /
 spring:
   application:
-    name: lph-item
+    name: lph-zuul
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   cloud:
@@ -34,6 +34,3 @@ spring:
 logging:
   config: classpath:logback-spring.xml
 
-feign:
-  hystrix:
-    enabled: true
